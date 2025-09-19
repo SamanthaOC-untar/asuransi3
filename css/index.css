@@ -1,0 +1,230 @@
+:root {
+  --fg:  #0A3D62;
+  --bg: #3498DB; 
+  --muted: #52B788;
+  --accent: #F8F9FA; 
+  --card: #52B788;
+  --border: #14532D;
+  --button: #3498DB;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(var(--bg), var(--muted));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--fg);
+}
+
+/* Navbar Mulai */
+.navbar {
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .navbar .logo {
+      color: var(--card);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+/* Navbar Selesai */
+
+/* Section Home Mulai*/
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--accent), var(--muted));
+}
+
+/* Konten kiri */
+
+.home-content h1 {
+  font-size: 4rem;
+  color: var(--fg);
+  margin-bottom: 15px;
+}
+.home-content h2 {
+  font-size: 2rem;
+  color: var(--border);
+  margin-bottom: 15px;
+}
+
+.home-content p {
+  font-size: 1.8rem;
+  color: var(--border);
+  margin-bottom: 20px;
+}
+
+/* Tombol utama */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px 10px 5px 0;
+  border-radius: 30px;
+  background: var(--button);
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--fg);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Tombol group */
+.btn-group {
+  margin-top: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: var(--bg);
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--fg);
+  transform: scale(1.2);
+}
+
+/* Gambar kanan */
+.home-img img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsif*/
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content {
+    margin-top: 13vh;
+    margin-bottom: 30px;
+  }
+
+  .home-img img {
+    width: 250px;
+  }
+}
+/* Section Home Selesai */
+
+/* Layout */
+header, main, footer { width: 100%; }
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 9999999;
+  background:linear-gradient(var(--fg));
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--accent);
+}
+
+header h1, header h3 {
+  margin: 0;
+}
+
+header {
+  display: grid;
+  gap: .25rem;
+  padding: 1rem 1.25rem;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem 3rem;
+}
+
+article {
+  width: min(800px, 100%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--border);
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+}
+
+/* Typography */
+h1 { font-family: 'Merriweather'; color: var(--accent); font-size: (1.5rem, 2.5vw, 2rem); letter-spacing: -0.02em; }
+h3 { font-family: 'Merriweather'; font-weight: 500; color: var(--muted); font-size: clamp(0.95rem, 1.6vw, 1.05rem); }
+
+h2 {
+  margin: 1.5rem 0 .5rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-family: 'Merriweather';
+}
+
+p { margin: .75rem 0; 
+  font-family: 'Poppins';
+}
+
+/* Lists */
+ul, ol { font-family: 'Poppins'; margin: .5rem 0 1rem 1.25rem; padding: 0; }
+li { margin: .35rem 0; }
+
+/* Links */
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Size apapun bisa */
+@media (max-width: 640px) {
+  article { border-radius: 12px; }
+  ul, ol { margin-left: 1rem; }
+}
+
+article > h2:first-child { margin-top: 0; }
+article > p, ol, ul { font-size: 1.05rem; color: var(--muted); }
+article > article {background-color: #fdf0f5;}

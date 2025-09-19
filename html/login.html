@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN - ASURANSI</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id = "loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="userEmail" name="email" placeholder="Masukkan email">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Kata Sandi</label>
+        <input type="password" id="userPassword" name="password" placeholder="Masukkan kata sandi">
+      </div>
+
+      <div id="errors" class="errors"></div>
+
+      <button type="submit" class="btn-login">Masuk</button>
+      <div class="extra-links">
+        <p>Belum punya akun? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </form>
+  </div>
+
+
+   <script src = "../javascript/loginscript.js"></script>
+</body>
+</html>
