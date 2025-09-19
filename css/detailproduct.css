@@ -54,168 +54,58 @@ body {
 
 /* Navbar Selesai */
 
-/* Section Home Mulai*/
-.home {
-  display: flex;
-  /* flex-direction: column; 
-  align-items: center;     /* biar isi center */
-  justify-content: space-between;
-  padding: 80px 10%;
-  min-height: 100vh;
-  background: linear-gradient(135deg, var(--accent), var(--muted));
-  /* text-align: center; */
-}
-/* Konten kiri */
+/* Section Detail Produk Mulai */
 
-.home-content {
-  flex: 1;
-  padding-right: 40px;
-}
-
-.home-img {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.home-img img {
-  margin-top: 20%;
-  height: 500px;
-  width: 500px;
-  /* border-radius: 20px; */
-  /* box-shadow: 0 8px 20px rgba(0,0,0,0.15); */
-}
-
-.home-content h1 {
-  font-size: 4rem;
+.product-detail {
+  max-width: 900px;
+  margin: 6rem auto 3rem;
+  padding: 2rem;
+  background: var(--accent);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   color: var(--fg);
-  margin-bottom: 15px;
-}
-.home-content h2 {
-  font-size: 2rem;
-  color: var(--border);
-  margin-bottom: 15px;
 }
 
-.home-content p {
-  font-size: 1.8rem;
-  color: var(--border);
-  margin-bottom: 20px;
+.product-detail h1 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  margin-bottom: 1rem;
+  color: var(--fg);
 }
 
-/* Tombol utama */
+.product-detail p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+.product-detail ul {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2rem;
+}
+
+.product-detail li {
+  margin-bottom: .5rem;
+  font-size: 0.95rem;
+}
+
+/* Tombol */
 .btn {
   display: inline-block;
-  padding: 23px 25px;
-  margin: 5px 10px 5px 0;
-  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
   background: var(--button);
   color: var(--accent);
-  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
   transition: 0.3s;
-  font-weight: 500;
-  font-size: 1.3rem;
 }
 
 .btn:hover {
   background: var(--fg);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
 }
 
-/* Tombol group */
-.btn-group {
-  margin-top: 30px;
-}
-
-/* Social Icons */
-.social-icons {
-  margin: 30px 0;
-}
-
-.social-icons a {
-  display: inline-block;
-  font-size: 1.5rem;
-  margin-right: 15px;
-  color: var(--bg);
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: var(--fg);
-  transform: scale(1.2);
-}
-/* Section Home Selesai */
-
-/* Section Products Mulai */
-.products {
-  padding: 80px 10%;
-  min-height: 100vh;
-  background: linear-gradient(135deg, var(--accent), var(--muted));
-  text-align: center;
-}
-
-.products h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: var(--fg);
-  font-family: 'Merriweather', serif;
-}
-
-/* Container untuk card */
-.product-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-/* Card produk */
-.product-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
-}
-
-.product-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-  color: var(--accent);
-}
-
-.product-card p {
-  font-size: 1rem;
-  color: var(--fg);
-  margin-bottom: 20px;
-}
-
-/* Tombol dalam card */
-.product-card .btn {
-  padding: 12px 20px;
-  font-size: 1rem;
-  background: var(--button);
-  color: var(--accent);
-  border-radius: 30px;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-.product-card .btn:hover {
-  background: var(--fg);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* Hover efek untuk card */
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-
-/* Section Products Selesai */
+/* Section Detail Produk */
 
 /* Layout */
 header, main, footer { width: 100%; }
