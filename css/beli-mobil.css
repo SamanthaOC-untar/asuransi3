@@ -1,0 +1,176 @@
+:root {
+  --fg:  #0A3D62;
+  --bg: #3498DB; 
+  --muted: #52B788;
+  --accent: #F8F9FA; 
+  --card: #52B788;
+  --border: #14532D;
+  --button: #3498DB;
+}
+
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin-top: 15vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(var(--bg), var(--muted));
+  color: var(--fg);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header kecil di atas form */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--fg);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin-right: 95vh;
+  font-size: 1.2rem;
+}
+
+header nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar Mulai */
+.navbar {
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .navbar .logo {
+      color: var(--card);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+/* Navbar Selesai */
+
+
+/* Container form */
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 5rem; /* beri jarak dari header */
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: var(--fg);
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--bg);
+  padding-bottom: 0.5rem;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--fg);
+}
+
+input, select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: var(--bg);
+  outline: none;
+  box-shadow: 0 0 5px rgba(52,152,219,0.4);
+}
+
+/* Catatan kecil */
+.note {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+
+/* Tombol */
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--button);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+  background: #217dbb;
+}
+
+/* Hasil premi */
+#hasil {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--fg);
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.7rem;
+  background: var(--muted);
+  border-radius: 6px;
+}

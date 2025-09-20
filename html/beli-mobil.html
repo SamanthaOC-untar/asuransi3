@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beli Asuransi Mobil</title>
+  <link rel="stylesheet" href="../css/beli-mobil.css">
+</head>
+<body>
+    <header class="header">
+        
+      <nav class="navbar">
+      <h1>Beli Asuransi Samantha</h1>
+      <div></div>
+      <div></div>
+      <div></div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Beranda</a>
+          <a href="#products">Produk</a>
+        </div>
+      <i class = 'bx bx-menu' id = "menu-icon"></i>
+     </nav>
+    </header>
+
+    <!-- Formulir Pembelian Asuransi Mobil Mulai -->
+
+  <div class="beli-container">
+    
+    <form>
+    <form id = "beliMobilForm">
+      <div class="form-group">
+        <label for="merkMobil">Merk Mobil</label>
+        <input type="text" id="merkMobil" name="merkMobil" placeholder="Masukkan merk mobil">
+      </div>
+
+      <div class="form-group">
+        <label for="jenisMobil">Jenis Mobil</label>
+        <input type="text" id="jenisMobil" name="jenisMobil" placeholder="Masukkan jenis mobil">
+      </div>
+
+      <div class="form-group">
+        <label for="tahunMobil">Tahun Pembuatan Mobil</label>
+        <input type="text" id="tahunMobil" name="tahunMobil" placeholder="Masukkan tahun mobil">
+      </div>
+
+      <div class="form-group">
+        <label for="hargaMobil">Harga Mobil</label>
+        <input type="text" id="hargaMobil" name="hargaMobil" placeholder="Masukkan harga mobil">
+      </div>
+
+      <div class="form-group">
+        <label for="nomorPlatMobil">Nomor Plat Mobil</label>
+        <input type="text" id="nomorPlatMobil" name="nomorPlatMobil" placeholder="Masukkan nomor plat mobil">
+      </div>
+
+      <div class="form-group">
+        <label for="nomorMesin">Nomor Mesin</label>
+        <input type="text" id="nomorMesin" name="nomorMesin" placeholder="Masukkan nomor mesin">
+      </div>
+
+      <div class="form-group">
+        <label for="nomorRangka">Nomor Rangka</label>
+        <input type="text" id="nomorRangka" name="nomorRangka" placeholder="Masukkan nomor rangka">
+      </div>
+
+        <div class="form-group">
+          <label for="namaPemilik">Nama Pemilik</label>
+          <input type="text" id="namaPemilik" name="namaPemilik" placeholder="Masukkan nama pemilik">
+        </div>
+
+        <div class="form-group">
+          <label for="fotoMobil">Upload Foto Mobil</label>
+          <p class="hint">* Upload foto tampak depan, belakang, kiri, kanan, dashboard, dan mesin</p>
+          <input type="file" id="fotoMobil" name="fotoMobil[]" accept="image/*">
+        </div>
+
+      <div id="errors" class="errors"></div>
+
+      <button type="submit" class="btn-login">Submit</button>
+    </form>
+    </form>
+  </div>
+    <!-- Formulir Pembelian Asuransi Mobil Selesai -->
+
+    <script src = "../javascript/beli-mobilscript.js"></script>
+</body>
+</html>
