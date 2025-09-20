@@ -41,7 +41,6 @@ beliMobilForm.addEventListener("submit", function(e){
             ${errs.map((e) => `<li>${e}</li>`).join("")}
             </ul>
         `;
-        return;
     }
     else{
             //Hitung harga premi asuransi
@@ -62,10 +61,15 @@ beliMobilForm.addEventListener("submit", function(e){
                 Harga Premi: ${new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',minimumFractionDigits:0,maximumFractionDigits:0}).format(premi)},00/tahun
             </h1>
             <br>
+            <button type="button" id="btnCheckout" class="btn-checkout">Checkout</button>
+
         `;
         alert("Data asuransi mobil berhasil diinput!");
-        return;
     }
+
+    btnCheckout.addEventListener("click", () => {
+    window.location.href = "checkout.html";
+  });
 
 });
 
