@@ -63,7 +63,7 @@ beliMobilForm.addEventListener("submit", function(e){
             </h1>
             <br>
         `;
-        alert("Data mobil berhasil diinput!");
+        alert("Data asuransi mobil berhasil diinput!");
         return;
     }
 
