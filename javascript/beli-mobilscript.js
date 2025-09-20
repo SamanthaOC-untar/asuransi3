@@ -8,7 +8,9 @@ const nomorMesin=document.getElementById('nomorMesin');
 const nomorRangka=document.getElementById('nomorRangka');
 const namaPemilik=document.getElementById('namaPemilik');
 const errors=document.getElementById('errors');
+const hargaPremi=document.getElementById('hargaPremi');
 
+console.log(beliMobilForm);
 beliMobilForm.addEventListener("submit", function(e){
     e.preventDefault();
 
@@ -42,21 +44,29 @@ beliMobilForm.addEventListener("submit", function(e){
         return;
     }
     else{
-       alert("Data mobil berhasil diinput!");
-       window.location.href = "index.html";
-    }
+            //Hitung harga premi asuransi
+        let lama = 2025-tahun;
+        if(lama < 3) premi = harga*0.025;
+        if(lama>=3 &&lama<=5 ){
+            if(harga<=200000000){
+                premi = harga*0.04;
+            }
+            else{
+                premi = harga*0.03;
+            }
+        }
+        if(lama>5) premi = harga*0.05;
 
-    //Hitung harga premi asuransi
-    let lama = 2025-tahun;
-    if(lama < 3) premi = harga*0.025;
-    if(lama>=3 &&lama<=5 ){
-        if(harga<=200000000){
-            premi = harga*0.04;
-        }
-        else{
-            premi = harga*0.03;
-        }
+        hargaPremi.innerHTML =`
+            <h1 style="border:1px solid black; padding:10px;">
+                Harga Premi: ${new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',minimumFractionDigits:0,maximumFractionDigits:0}).format(premi)},00
+            </h1>
+            <br>
+        `;
+        alert("Data mobil berhasil diinput!");
+        return;
     }
-    if(lama>5) premi = harga*0.05;
 
 });
+
+
