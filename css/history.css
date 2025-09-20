@@ -117,6 +117,12 @@ p { margin: .75rem 0;
   font-family: 'Poppins';
 }
 
+td{
+  padding:10px;
+  border-bottom:1px
+  solid var(--border);
+}
+
 th{
   text-align:left; 
   padding:10px; 
@@ -133,6 +139,7 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* Tombol */
+
 .btn-login {
     width: 100%;
     padding: 10px;
@@ -142,6 +149,7 @@ a:hover { text-decoration: underline; }
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn-login:hover {

@@ -7,53 +7,69 @@
   <link rel="stylesheet" href="../css/history.css" />
 </head>
 <body>
-   <header class="header">
-        
-      <nav class="navbar">
+  <header class="header">
+    <nav class="navbar">
       <h1>Riwayat Asuransi - Samantha</h1>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div></div><div></div><div></div>
 
-        <div class="nav-links" id="navLinks">
-          <a href="index.html">Beranda</a>
-          <a href="detail-kendaraan.html">Detail Asuransi Mobil</a>
-          <a href="detail-kesehatan.html">Detail Asuransi Kesehatan</a>
-          <a href="detail-jiwa.html">Detail Asuransi Jiwa</a>
-        </div>
-      <i class = 'bx bx-menu' id = "menu-icon"></i>
-     </nav>
-    </header>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Beranda</a>
+        <a href="detail-kendaraan.html">Detail Asuransi Mobil</a>
+        <a href="detail-kesehatan.html">Detail Asuransi Kesehatan</a>
+        <a href="detail-jiwa.html">Detail Asuransi Jiwa</a>
+      </div>
+      <i class='bx bx-menu' id="menu-icon"></i>
+    </nav>
+  </header>
 
   <main>
     <article>
       <h2>Riwayat Transaksi</h2>
 
-      <div id="emptyState" style="margin:.5rem 0 1rem;">
-        <!-- akan diisi JS bila data kosong -->
-      </div>
+      <!-- Asumsi pengguna sudah login untuk mengakses halaman ini -->
 
       <div>
         <table id="historyTable" style="width:100%; border-collapse:collapse;">
           <thead>
             <tr>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Produk</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Jenis</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Tanggal Pembelian</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Harga Dibayar</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Status</th>
+              <th>Produk</th>
+              <th>Jenis</th>
+              <th>Tanggal Pembelian</th>
+              <th>Harga Dibayar</th>
+              <th>Status</th>
             </tr>
           </thead>
-          <tbody id="tbodyHistory"></tbody>
+          <tbody id="tbodyHistory">
+            <!-- DUMMY DATA (statik) -->
+            <tr>
+              <td>Asuransi Jiwa</td>
+              <td>Jiwa</td>
+              <td>15 Januari 2025, 16.32</td>
+              <td>Rp 2.500.000</td>
+              <td>Lunas</td>
+            </tr>
+            <tr>
+              <td>Asuransi Jiwa</td>
+              <td>Jiwa</td>
+              <td>2 Februari 2025, 20.05</td>
+              <td>Rp 1.800.000</td>
+              <td>Belum Lunas</td>
+            </tr>
+            <tr>
+              <td>Asuransi Kesehatan</td>
+              <td>Kesehatan</td>
+              <td>10 Februari 2025, 02.45</td>
+              <td>Rp 3.200.000</td>
+              <td>Belum Lunas</td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
       <div style="margin-top:1rem; display:grid; gap:.5rem;">
-        <button class="btn-login" id="btnKembali">Kembali</button>
+        <a class="btn-login" href="index.html">Kembali</a>
       </div>
     </article>
   </main>
-
-  <script src="../javascript/historyscript.js" defer></script>
 </body>
 </html>
