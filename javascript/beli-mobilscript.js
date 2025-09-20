@@ -59,7 +59,7 @@ beliMobilForm.addEventListener("submit", function(e){
 
         hargaPremi.innerHTML =`
             <h1 style="border:1px solid black; padding:10px;">
-                Harga Premi: ${new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',minimumFractionDigits:0,maximumFractionDigits:0}).format(premi)},00
+                Harga Premi: ${new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',minimumFractionDigits:0,maximumFractionDigits:0}).format(premi)},00/tahun
             </h1>
             <br>
         `;

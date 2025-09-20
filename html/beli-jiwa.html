@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beli Asuransi Jiwa</title>
+  <link rel="stylesheet" href="../css/beliasuransi.css">
+</head>
+<body>
+    <header class="header">
+        
+      <nav class="navbar">
+      <h1>Beli Asuransi Jiwa - Samantha</h1>
+      <div></div>
+      <div></div>
+      <div></div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Beranda</a>
+          <a href="detail-jiwa.html">Detail Asuransi Jiwa</a>
+        </div>
+      <i class = 'bx bx-menu' id = "menu-icon"></i>
+     </nav>
+    </header>
+
+    <!-- Formulir Pembelian Asuransi Jiwa Mulai -->
+
+  <div class="beli-container">
+
+    <form id = "beliJiwaForm">
+
+      <div id="hargaPremi" class="hargaPremi"></div>
+      
+      <div class="form-group">
+        <label for="namaLengkap">Nama Lengkap Sesuai KTP</label>
+        <input type="text" id="namaLengkap" name="namaLengkap" placeholder="Masukkan nama lengkap">
+      </div>
+
+      <div class="form-group">
+        <label for="tanggalLahir">Tanggal Lahir</label>
+        <input type="date" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan tanggal lahir">
+      </div>
+
+        <div class="form-group">
+        <label for="tanggungan">Besaran pertanggungan</label>
+            <select id="tanggungan" name="tanggungan">
+                <option value="">-- Pilih --</option>
+                <option value="1000000">1.000.000</option>
+                <option value="2000000">2.000.000</option>
+                <option value="3500000">3.500.000</option>
+                <option value="5000000">5.000.000</option>
+                <option value="10000000">10.000.000</option>
+            </select>
+        </div>  
+
+      <div id="errors" class="errors"></div>
+
+      <button type="submit" class="btn-login">Submit</button>
+    </form>
+  </div>
+    <!-- Formulir Pembelian Asuransi Jiwa Selesai -->
+
+    <script src = "../javascript/beli-jiwascript.js"></script>
+</body>
+</html>
