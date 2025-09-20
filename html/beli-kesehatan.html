@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beli Asuransi Kesehatan</title>
+  <link rel="stylesheet" href="../css/beliasuransi.css">
+</head>
+<body>
+    <header class="header">
+        
+      <nav class="navbar">
+      <h1>Beli Asuransi Kesehatan - Samantha</h1>
+      <div></div>
+      <div></div>
+      <div></div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Beranda</a>
+          <a href="detail-kesehatan.html">Detail Asuransi Kesehatan</a>
+        </div>
+      <i class = 'bx bx-menu' id = "menu-icon"></i>
+     </nav>
+    </header>
+
+    <!-- Formulir Pembelian Asuransi Kesehatan Mulai -->
+
+  <div class="beli-container">
+
+    <form id = "beliKesehatanForm">
+      <div class="form-group">
+        <label for="namaLengkap">Nama Lengkap Sesuai KTP</label>
+        <input type="text" id="namaLengkap" name="namaLengkap" placeholder="Masukkan nama lengkap">
+      </div>
+
+      <div class="form-group">
+        <label for="tanggalLahir">Tanggal Lahir</label>
+        <input type="text" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan tanggal lahir">
+      </div>
+
+      <div class="form-group">
+        <label for="pekerjaan">Pekerjaan</label>
+        <input type="text" id="pekerjaan" name="pekerjaan" placeholder="Masukkan pekerjaan">
+      </div>
+
+        <div class="form-group">
+        <label for="merokok">Apakah Anda merokok?</label>
+            <select id="merokok" name="merokok">
+                <option value="">-- Pilih --</option>
+                <option value="ya">Ya</option>
+                <option value="tidak">Tidak</option>
+            </select>
+        </div>  
+
+        <div class="form-group">
+        <label for="riwayatHipertensi">Apakah mempunyai riwayat hipertensi?</label>
+            <select id="riwayatHipertensi" name="riwayatHipertensi">
+                <option value="">-- Pilih --</option>
+                <option value="ya">Ya</option>
+                <option value="tidak">Tidak</option>
+            </select>
+        </div>  
+        
+        <div class="form-group">
+        <label for="riwayatDiabetes">Apakah mempunyai riwayat diabetes?</label>
+            <select id="riwayatDiabetes" name="riwayatDiabetes">
+                <option value="">-- Pilih --</option>
+                <option value="ya">Ya</option>
+                <option value="tidak">Tidak</option>
+            </select>
+        </div>  
+
+      <div id="errors" class="errors"></div>
+
+      <button type="submit" class="btn-login">Submit</button>
+    </form>
+  </div>
+    <!-- Formulir Pembelian Asuransi Kesehatan Selesai -->
+
+    <script src = "../javascript/beli-kesehatanscript.js"></script>
+</body>
+</html>
