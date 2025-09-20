@@ -45,30 +45,8 @@ paymentForm.addEventListener('submit', (e) => {
     return;
   }
 
-  processingCard.classList.remove('hidden');
+  // processingCard.classList.remove('hidden');
   btnBayar.disabled = true;
-
-  setTimeout(() => {
-    // Simpan ke histori (localStorage)
-    const now = new Date();
-    const item = {
-      id: 'ORD-' + now.getTime(),
-      waktu: now.toISOString(),
-      produk: 'Asuransi Jiwa',
-      nama,
-      premi,
-      metode: metode.value
-    };
-
-    try {
-      const key = 'purchaseHistory';
-      const arr = JSON.parse(localStorage.getItem(key) || '[]');
-      arr.unshift(item);
-      localStorage.setItem(key, JSON.stringify(arr));
-    } catch (_) { /* ignore */ }
-
-    // Redirect ke histori
-    const q = new URLSearchParams({paid: 'true', id: item.id}).toString();
-    location.href = `histori.html?${q}`;
-  }, 1000);
+  // Redirect ke histori
+  location.href = "history.html?";
 });

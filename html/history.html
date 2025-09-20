@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Histori Pembelian</title>
+  <link rel="stylesheet" href="../css/history.css" />
+</head>
+<body>
+   <header class="header">
+        
+      <nav class="navbar">
+      <h1>Riwayat Asuransi - Samantha</h1>
+      <div></div>
+      <div></div>
+      <div></div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Beranda</a>
+          <a href="detail-kendaraan.html">Detail Asuransi Mobil</a>
+          <a href="detail-kesehatan.html">Detail Asuransi Kesehatan</a>
+          <a href="detail-jiwa.html">Detail Asuransi Jiwa</a>
+        </div>
+      <i class = 'bx bx-menu' id = "menu-icon"></i>
+     </nav>
+    </header>
+
+  <main>
+    <article>
+      <h2>Riwayat Transaksi</h2>
+
+      <div id="emptyState" style="margin:.5rem 0 1rem;">
+        <!-- akan diisi JS bila data kosong -->
+      </div>
+
+      <div>
+        <table id="historyTable" style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Produk</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Jenis</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Tanggal Pembelian</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Harga Dibayar</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid var(--border);">Status</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyHistory"></tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:1rem; display:grid; gap:.5rem;">
+        <button class="btn-login" id="btnKembali">Kembali</button>
+      </div>
+    </article>
+  </main>
+
+  <script src="../javascript/historyscript.js" defer></script>
+</body>
+</html>
