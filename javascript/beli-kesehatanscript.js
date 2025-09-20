@@ -38,7 +38,7 @@ beliKesehatanForm.addEventListener("submit", function(e){
     }
     else{
         //Hitung harga premi asuransi
-        let premi=2000000;
+        var premi=2000000;
         let tahunLahir = new Date(tanggal).getFullYear();
         let umur = 2025-tahunLahir;
 
@@ -62,11 +62,16 @@ beliKesehatanForm.addEventListener("submit", function(e){
         alert("Data Asuransi Jiwa berhasil diinput!");
     }
 
-    btnCheckout.addEventListener("click", () => {
-    window.location.href = "checkout.html";
-  });
+   const btnCheckout = document.getElementById("btnCheckout");
+        btnCheckout.addEventListener("click", () => {
+        const params = new URLSearchParams({
+            nama,         
+            premi: String(Math.round(premi))        // premi dibulatkan
+         });
+        window.location.href = `checkout.html?${params.toString()}`;
+    });
 
-  return;
+    return;
 });
 
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout Asuransi Jiwa</title>
+  <link rel="stylesheet" href="../css/checkout.css" />
+</head>
+<body>
+  <header class="header">
+        
+      <nav class="navbar">
+      <h1>Checkout Asuransi - Samantha</h1>
+      <div></div>
+      <div></div>
+      <div></div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Beranda</a>
+          <a href="detail-kendaraan.html">Detail Asuransi Mobil</a>
+        </div>
+      <i class = 'bx bx-menu' id = "menu-icon"></i>
+     </nav>
+    </header>
+
+  <main>
+    <article>
+      <h2>Ringkasan Premi</h2>
+      <div class="summary">
+        <div><span>Nama</span><strong id="namaTertanggung">-</strong></div>
+        <div><span>Harga Premi</span><strong id="hargaPremiText">-</strong></div>
+      </div>
+    </article>
+
+    <article>
+      <h2>Metode Pembayaran</h2>
+      <form id="paymentForm" class="pay-form">
+        <label class="radio-row">
+          <input type="radio" name="metode" value="Kartu Kredit/Debit" />
+          <span>Kartu Kredit/Debit (Visa/Mastercard)</span>
+        </label>
+        <label class="radio-row">
+          <input type="radio" name="metode" value="Transfer Bank" />
+          <span>Transfer Bank (ATM/MBanking)</span>
+        </label>
+        <label class="radio-row">
+          <input type="radio" name="metode" value="Virtual Account" />
+          <span>Virtual Account</span>
+        </label>
+        <label class="radio-row">
+          <input type="radio" name="metode" value="E-Wallet" />
+          <span>E-Wallet (OVO, GoPay, Dana, ShopeePay)</span>
+        </label>
+
+        <div id="errors" class="errors"></div>
+
+        <div class="actions">
+          <button type="button" class="btn-secondary" id="btnKembali">Kembali</button>
+          <button type="submit" class="btn-login" id="btnBayar" disabled>Bayar Sekarang</button>
+        </div>
+        <p class="hint">Dengan menekan “Bayar Sekarang”, Anda menyetujui transaksi dan ketentuan yang berlaku.</p>
+      </form>
+    </article>
+
+  <footer>
+    <small>&copy; 2025 Samantha Insurance</small>
+  </footer>
+
+  <script src="../javascript/checkoutscript.js" defer></script>
+</body>
+</html>

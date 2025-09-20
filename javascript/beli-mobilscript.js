@@ -21,7 +21,7 @@ beliMobilForm.addEventListener("submit", function(e){
     let plat = nomorPlatMobil.value.trim();
     let mesin = nomorMesin.value.trim();
     let rangka = nomorRangka.value.trim();
-    let pemilik = namaPemilik.value.trim();
+    let nama = namaPemilik.value.trim();
 
     //input validation
     let errs=[];
@@ -33,7 +33,7 @@ beliMobilForm.addEventListener("submit", function(e){
     if(!plat) errs.push("Nomor Plat Mobil is required.");
     if(!mesin) errs.push("Nomor Mesin is required.");
     if(!rangka) errs.push("Nomor Rangka is required.");
-    if(!pemilik) errs.push("Nama Pemilik is required.");
+    if(!nama) errs.push("Nama Pemilik is required.");
     if(errs.length>0){
         errors.innerHTML = errs.join("<br>");
         errors.innerHTML =`
@@ -66,11 +66,16 @@ beliMobilForm.addEventListener("submit", function(e){
         `;
         alert("Data asuransi mobil berhasil diinput!");
     }
-
-    btnCheckout.addEventListener("click", () => {
-    window.location.href = "checkout.html";
-  });
-
+        const btnCheckout = document.getElementById("btnCheckout");
+            btnCheckout.addEventListener("click", () => {
+                const params = new URLSearchParams({
+                nama,         
+                premi: String(Math.round(premi))        // premi dibulatkan
+                });
+                window.location.href = `checkout.html?${params.toString()}`;
+        });
+    return;
 });
+
 
 
