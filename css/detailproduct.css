@@ -1,209 +1,220 @@
 /* Detail Produk */
-
+/* :root variabel warna */
 :root {
   --fg:  #0A3D62;
-  --bg: #3498DB; 
+  --bg: #3498DB;
   --muted: #52B788;
-  --accent: #F8F9FA; 
+  --accent: #F8F9FA;
   --card: #52B788;
   --border: #14532D;
   --button: #3498DB;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* Reset dasar */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
 
+/* Layout halaman Mulai */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(var(--bg), var(--muted));
-    height: 100vh;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    color: var(--fg);
+  display: block;      
+  margin-top: 0;      
+  min-height: auto;   
+  background: var(--bg);
 }
+/* Layout halaman Selesai */
+
+/* Header Mulai */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--fg);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,.18);
+}
+/* Header Selesai */
 
 /* Navbar Mulai */
 .navbar {
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-    }
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .navbar .logo {
-      color: var(--card);
-      font-size: 20px;
-      font-weight: bold;
-    }
+.navbar h1 {
+  font-size: 1.1rem;
+  color: var(--accent);
+}
 
-    .nav-links {
-      display: flex;
-      gap: 15px;
-    }
+.nav-links { display: flex; gap: 16px; }
 
-    .nav-links a {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 16px;
-    }
+.nav-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: .95rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background .2s ease, transform .1s ease;
+}
 
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
+.nav-links a:hover {
+  background: rgba(255,255,255,.12);
+  transform: translateY(-1px);
+}
 
+.nav-links a.active {
+  background: var(--bg);
+  color: #fff;
+}
 /* Navbar Selesai */
 
-/* Section Detail Produk Mulai */
-
+/* Container detail produk */
 .product-detail {
-  max-width: 900px;
-  margin: 6rem auto 3rem;
+  max-width: 1000px;
+  margin: 4rem auto;
   padding: 2rem;
   background: var(--accent);
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  color: var(--fg);
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.18);
 }
 
 .product-detail h1 {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-  margin-bottom: 1rem;
+  text-align: center;
   color: var(--fg);
+  font-size: 1.6rem;
+  margin-bottom: .6rem;
 }
 
-.product-detail p {
-  line-height: 1.6;
-  font-size: 1rem;
-  color: #333;
+.product-detail .subtitle {
+  text-align: center;
+  margin: 0 auto 1.6rem;
+  max-width: 72ch;
+  font-size: 1.02rem;
 }
 
-.product-detail ul {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  padding-left: 1.2rem;
+/* List manfaat Mulai */
+.benefit-list {
+  display: grid;
+  grid-template-columns: 1fr;   /* default: 1 kolom di mobile */
+  gap: 1rem;
+  margin: 1.8rem 0 1.4rem;
 }
 
-.product-detail li {
-  margin-bottom: .5rem;
-  font-size: 0.95rem;
+.benefit-item {
+  background: var(--card);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+
+  min-height: 110px;
+  padding: 1rem 1.2rem;
+
+  font-weight: 600;
+  letter-spacing: .2px;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
+
+.benefit-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+}
+/* List manfaat Selesai */
+
+/* Info tambahan Mulai */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 12px;
+  padding: 1.2rem 1.1rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+}
+
+.info-card h3 {
+  color: var(--fg);
+  margin-bottom: .6rem;
+  font-size: 1.04rem;
+}
+
+.info-card ul { list-style: none; }
+.info-card li {
+  position: relative;
+  padding-left: 1rem;
+  margin: .45rem 0;
+}
+.info-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--bg);
+  line-height: 1;
+}
+/* Info tambahan Selesai */
 
 /* Tombol */
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: .85rem 1.4rem;
   background: var(--button);
-  color: var(--accent);
-  border-radius: 12px;
-  font-weight: bold;
-  transition: 0.3s;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background .22s ease, transform .15s ease, box-shadow .15s ease;
 }
-
 .btn:hover {
   background: var(--fg);
   transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(0,0,0,.16);
 }
 
-/* Section Detail Produk */
-
-/* Layout */
-header, main, footer { width: 100%; }
-
-header {
-  position: fixed;
-  top: 0;
-  z-index: 9999999;
-  background:linear-gradient(var(--fg));
-  backdrop-filter: saturate(140%) blur(10px);
-  border-bottom: 1px solid var(--accent);
-}
-
-header h1, header h3 {
-  margin: 0;
-}
-
-header {
-  display: grid;
-  gap: .25rem;
-  padding: 1rem 1.25rem;
-}
-
-main {
-  display: grid;
-  place-items: center;
-  padding: 2rem 1rem 3rem;
-}
-
-article {
-  width: min(800px, 100%);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: clamp(1rem, 2.5vw, 2rem);
-  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
-}
-
-footer {
-  border-top: 1px solid var(--border);
-  background-color: var(--border);
+/* Footer Mulai */
+.footer {
+  margin-top: 3rem;
+  background: var(--fg);
+  color: var(--accent);
+  padding: 1.2rem 20px;
   text-align: center;
-  padding: 1.5rem 1rem 2rem;
+  font-size: .92rem;
+  border-top: 1px solid rgba(255,255,255,.08);
 }
+.footer a { color: var(--accent); text-decoration: underline; }
+/* Footer Selesai */
 
-/* Typography */
-h1 { font-family: 'Merriweather'; color: var(--accent); font-size: (1.5rem, 2.5vw, 2rem); letter-spacing: -0.02em; }
-h3 { font-family: 'Merriweather'; font-weight: 500; color: var(--muted); font-size: clamp(0.95rem, 1.6vw, 1.05rem); }
+/* Responsif Mulai */
 
-h2 {
-  margin: 1.5rem 0 .5rem;
-  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
-  line-height: 1.3;
-  letter-spacing: -0.01em;
-  font-family: 'Merriweather';
-}
-
-p { margin: .75rem 0; 
-  font-family: 'Poppins';
-}
-
-/* Lists */
-ul, ol { font-family: 'Poppins'; margin: .5rem 0 1rem 1.25rem; padding: 0; }
-li { margin: .35rem 0; }
-
-/* Links */
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-
-/* Responsif */
-@media (max-width: 992px) {
-  .product-container {
+@media (min-width: 680px) {
+  .benefit-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (max-width: 920px) {
+  .product-detail { margin: 3rem 1rem; padding: 1.4rem; }
+  .nav-links { gap: 10px; }
+}
+
 @media (max-width: 640px) {
-  .product-container {
-    grid-template-columns: 1fr;
-  }
+  .navbar { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .nav-links { flex-wrap: wrap; }
+  .product-detail h1 { font-size: 1.35rem; }
+  .product-detail .subtitle { font-size: .98rem; }
 }
-
-/* Responsif*/
-@media (max-width: 768px) {
-  .home {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .home-content {
-    margin-top: 13vh;
-    margin-bottom: 30px;
-  }
-
-  .home-img img {
-    width: 250px;
-  }
-}
+/* Responsif Selesai */

@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Detail Asuransi Kesehatan - Samantha</title>
-  <link rel="stylesheet" href="../css/detailproduct.css">
+  <link rel="stylesheet" href="../css/detailproduct.css" />
 </head>
 <body>
-    <header class="header">
-        
-        <nav class="navbar">
-            <h1>Wow Asuransi Kesehatan Samantha</h1>
+  <!-- Header Mulai -->
+  <header class="header">
+    <!-- Navbar Mulai -->
+    <nav class="navbar">
+      <h1>Asuransi Samantha</h1>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Beranda</a>
+        <a href="./detail-kendaraan.html">Asuransi Kendaraan</a>
+        <a class="active" href="./detail-kesehatan.html">Asuransi Kesehatan</a>
+        <a href="./detail-jiwa.html">Asuransi Jiwa</a>
+      </div>
+    </nav>
+    <!-- Navbar Selesai -->
+  </header>
+  <!-- Header Selesai -->
 
-            <div class="nav-links" id="navLinks">
-                <a href="index.html">Beranda</a>
-                <a href="./detail-kendaraan.html">Asuransi Kendaraan</a>
-                <a href="./detail-jiwa.html">Asuransi Jiwa</a>
-            </div>
-            <i class = 'bx bx-menu' id = "menu-icon"></i>
-        </nav>
-    </header>
+  <!-- Main Content Mulai -->
+  <main>
+    <!-- Container Detail Produk -->
+    <section class="product-detail">
+      <h1>Asuransi Kesehatan</h1>
+      <p class="subtitle">
+        Perlindungan biaya medis rawat inap dan rawat jalan, opsi cashless di RS rekanan,
+        serta manfaat tambahan seperti gigi, kacamata, dan pemeriksaan diagnostik.
+      </p>
 
-  <section class="product-detail">
-    <h1>Asuransi Kesehatan</h1>
-    <p>
-      Asuransi kesehatan Samantha memberikan perlindungan biaya medis, rawat inap, 
-      hingga perawatan darurat. Dengan jaringan rumah sakit rekanan luas di seluruh Indonesia, 
-      Anda dan keluarga mendapatkan rasa aman dalam menghadapi risiko kesehatan.
-    </p>
+      <!-- List Manfaat Mulai -->
+      <div class="benefit-list">
+        <div class="benefit-item">✔ Rawat inap (kamar, ICU, tindakan)</div>
+        <div class="benefit-item">✔ Rawat jalan (konsultasi, tes, obat)</div>
+        <div class="benefit-item">✔ Cashless di RS rekanan</div>
+        <div class="benefit-item">✔ Manfaat tambahan (gigi, kacamata)</div>
+      </div>
+      <!-- List Manfaat Selesai -->
 
-    <ul>
-      <li>Rawat inap dan rawat jalan</li>
-      <li>Biaya operasi dan perawatan intensif</li>
-      <li>Perawatan darurat di seluruh dunia</li>
-      <li>Cashless di rumah sakit rekanan</li>
-    </ul>
+      <!-- Info Tambahan Mulai -->
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Yang Perlu Dicek</h3>
+          <ul>
+            <li>Jaringan RS & metode klaim</li>
+            <li>Batas manfaat per tahun/kejadian</li>
+            <li>Masa tunggu & pengecualian</li>
+            <li>Manfaat keluarga (pasangan/anak)</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Contoh Perluasan</h3>
+          <ul>
+            <li>Hospital Cash Plan (tunjangan harian)</li>
+            <li>Penyakit kritis</li>
+            <li>Kecelakaan diri</li>
+            <li>Rawat jalan spesialis</li>
+          </ul>
+        </article>
+      </div>
+      <!-- Info Tambahan Selesai -->
 
-    <a href="beli-kesehatan.html" class="btn">Beli Sekarang</a>
-  </section>
+      <!-- Tombol Mulai -->
+      <a href="beli-kesehatan.html" class="btn">Ajukan Sekarang</a>
+      <!-- Tombol Selesai -->
+    </section>
+  </main>
+  <!-- Main Content Selesai -->
 </body>
 </html>
